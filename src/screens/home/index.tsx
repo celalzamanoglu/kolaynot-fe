@@ -179,6 +179,16 @@ export const Home = () => {
     }
   }
 
+  async function cancelRecording() {
+    if (!recording) return
+    await recording.stopAndUnloadAsync()
+    setRecording(null)
+    setIsRecording(false)
+    setIsPaused(false)
+    setTimer(0)
+    bottomSheetRef.current?.close()
+  }
+
   const snapPoints = useMemo(() => ['35%'], [])
 
   const renderBottomSheetContent = useCallback(() => {
@@ -197,7 +207,7 @@ export const Home = () => {
         <View style={styles.controlButtons}>
           {isPaused ? (
             <View style={{ gap: 30, flexDirection: 'row' }}>
-              <TouchableOpacity style={[styles.roundButton, styles.cancelButton]} onPress={stopRecording}>
+              <TouchableOpacity style={[styles.roundButton, styles.cancelButton]} onPress={cancelRecording}>
                 <MaterialIcons name='close' size={32} color='#fff' />
               </TouchableOpacity>
               <TouchableOpacity style={styles.roundButton} onPress={resumeRecording}>
