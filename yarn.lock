@@ -2016,6 +2016,11 @@
   dependencies:
     nanoid "^3.1.23"
 
+"@revenuecat/purchases-typescript-internal@13.15.2":
+  version "13.15.2"
+  resolved "https://registry.yarnpkg.com/@revenuecat/purchases-typescript-internal/-/purchases-typescript-internal-13.15.2.tgz#518c0f4d7ebba90a648b2e4cb4a83e97fb79eeb7"
+  integrity sha512-2vXvP+oQ3xg4n4f6v8+QLhW4wfe1eBAf9VRkuYGOaoi7dqhtTOj+2fOrDTAIpK4edh/3GuCAMbuKF0xnoGLbNw==
+
 "@segment/loosely-validate-event@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@segment/loosely-validate-event/-/loosely-validate-event-2.0.0.tgz#87dfc979e5b4e7b82c5f1d8b722dfd5d77644681"
@@ -5353,6 +5358,13 @@ react-native-gesture-handler@~2.20.2:
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
     prop-types "^15.7.2"
+
+react-native-purchases@^8.5.1:
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/react-native-purchases/-/react-native-purchases-8.5.1.tgz#07c436d30cbff613366d3e34ee2c52dad8656f51"
+  integrity sha512-z+SWcOZC2VVOCq7iw9rTgm0WYBNVYZ2IcBLWXmtofrAByW+QQXLNE0IUCpSxgStQaCPCPAWqGztzguB/ZIjyWw==
+  dependencies:
+    "@revenuecat/purchases-typescript-internal" "13.15.2"
 
 react-native-reanimated@~3.16.1:
   version "3.16.6"

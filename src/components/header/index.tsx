@@ -43,6 +43,18 @@ export const Header: React.FC<HeaderProps> = ({ navigation, isHomeScreen = true,
         navigation.navigate('Subscription')
       }
     },
+    ...(__DEV__
+      ? [
+          {
+            icon: 'bug-report',
+            label: 'Test Abonelik',
+            onPress: () => {
+              setIsMenuVisible(false)
+              navigation.navigate('SubscriptionTest')
+            }
+          } as MenuItem
+        ]
+      : []),
     {
       icon: 'feedback',
       label: 'Geri Bildirim',

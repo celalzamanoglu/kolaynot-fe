@@ -14,6 +14,7 @@ export type RootStackParamList = {
     note: SerializableNote
   }
   Subscription: undefined
+  SubscriptionTest: undefined
   Feedback: undefined
   TermsAndPrivacy: undefined
 }

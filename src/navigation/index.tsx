@@ -4,7 +4,17 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { StatusBar } from 'expo-status-bar'
-import { Home, Favorites, Note, Subscription, Feedback, TermsAndPrivacy, LoginScreen, VerifyScreen } from '@screens'
+import {
+  Home,
+  Favorites,
+  Note,
+  Subscription,
+  SubscriptionTest,
+  Feedback,
+  TermsAndPrivacy,
+  LoginScreen,
+  VerifyScreen
+} from '@screens'
 import { Header } from '@components'
 import type { RootStackParamList } from '@types'
 import { useAuthGuard } from '@hooks'
@@ -53,6 +63,7 @@ export const RootNavigator = () => {
               <Stack.Screen name='Favorites' component={Favorites} />
               <Stack.Screen name='Note' component={Note} />
               <Stack.Screen name='Subscription' component={Subscription} />
+              <Stack.Screen name='SubscriptionTest' component={SubscriptionTest} />
               <Stack.Screen name='Feedback' component={Feedback} />
               <Stack.Screen name='TermsAndPrivacy' component={TermsAndPrivacy} />
             </Stack.Group>
